@@ -1,5 +1,47 @@
 server:
   port: 7001
+dubbo:
+  application:
+    name: ${spring.application.name}
+    logger: slf4j
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://localhost:8848
+  config-center:
+    address: nacos://localhost:8848
+  metadata-report:
+    address: nacos://localhost:8848
+  consumer:
+    validation: true
+    timeout: 3000
+    check: false
+  scan:
+    base-packages: cuit.epoch.pymjl.controller
 spring:
+  autoconfigure:
+    exclude: com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost
+  application:
+    name: UserConsumer
   profiles:
     active: dev
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:cuit/hxf/pymjl/mapper/xml/*.xml
+  type-aliases-package: cuit.epoch.pymjl.entity

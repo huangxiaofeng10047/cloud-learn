@@ -1,12 +1,14 @@
-# Maven #
-target/
+### Example user template template
+### Example user template
 
-# IDEA #
-.idea/
+# IntelliJ project files
+.idea
 *.iml
-*.log
-
-# Eclipse #
-.settings/
-.classpath
-.project
+out
+gen
+mysql8/
+nacos/
+redis/
+*.class
+target/
+*.jar
