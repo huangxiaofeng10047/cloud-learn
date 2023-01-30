@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>cloud-learn</artifactId>
-        <groupId>cuit.epoch.pymjl</groupId>
+        <groupId>cuit.hxf.pymjl</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -34,7 +34,7 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>cuit.epoch.pymjl</groupId>
+            <groupId>cuit.hxf.pymjl</groupId>
             <artifactId>common-utils</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
@@ -92,11 +92,6 @@
         <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-httpclient</artifactId>
-        </dependency>
-        <!--sentinel依赖-->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
     </dependencies>
 
