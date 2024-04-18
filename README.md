@@ -35,3 +35,9 @@
 [15.Spring Cloud Gateway集成Sentinel流控](http://www.pymjl.com/#/blog/cloud-learn-sentinel-gateway)
 
 [16.OpenFeign集成Sentinel实现服务的熔断降级](http://www.pymjl.com/#/blog/cloud-learn-sentinel-openfeign)
+openfen-consumer的调用报错，can not create datasource
+解决办法：
+```angular2html
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class,DruidDataSourceAutoConfigure.class})
+
+```
