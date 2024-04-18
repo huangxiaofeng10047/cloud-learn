@@ -14,8 +14,8 @@ import org.springframework.context.annotation.ComponentScan;
  **/
 @SpringBootApplication
 @EnableDubbo
-//@MapperScan({"cuit.hxf.pymjl.mapper","com.gitee.sunchenbin.mybatis.actable.dao.*"})
-//@ComponentScan(basePackages = {"cuit.hxf.pymjl","com.gitee.sunchenbin.mybatis.actable.manager.*"})
+@MapperScan({"cuit.hxf.pymjl.mapper","com.gitee.sunchenbin.mybatis.actable.dao.*"})
+@ComponentScan(basePackages = {"cuit.hxf.pymjl","com.gitee.sunchenbin.mybatis.actable.manager.*"})
 public class UserServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(UserServiceApplication.class, args);

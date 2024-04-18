@@ -1,7 +1,24 @@
+service-url:
+    user-service: http://localhost:8081
 spring:
   application:
     name: gateway-service
   cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedHeaders: '*'
+            allowedMethods: '*'
+            allowedOrigins: '*'
+      routes:
+        - id: path_route
+          uri: ${service-url.user-service}/user/get/{id}
+#          uri: lb://user-service
+          predicates:
+            - Path=/user/get/{id}
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin, RETAIN_UNIQUE
     nacos:
       discovery:
         server-addr: localhost:8848 #Nacos地址
