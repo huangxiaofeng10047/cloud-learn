@@ -1,8 +1,9 @@
 package cuit.epoch.pymjl;
 
-import cuit.epoch.pymjl.entity.User;
-import cuit.epoch.pymjl.mapper.UserMapper;
-import cuit.epoch.pymjl.service.UserService;
+
+import cuit.hxf.pymjl.entity.User;
+import cuit.hxf.pymjl.mapper.UserMapper;
+import cuit.hxf.pymjl.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
